@@ -56,7 +56,7 @@ nK=length(unique(Y))-1;
         nonzerosd=cell2mat(cellfun( @(myx) sum(myx~=0), myalpha,'UniformOutput',false));
         nonzerosd1=reshape(nonzerosd,nK,length(nonzerosd)/nK);
         myres=nonzerosd1./repmat(dsizes,nK,1);
-        if(all(myres(:)<=0.1))
+        if(all(myres(:)<=0.25))
             break
         end
      
